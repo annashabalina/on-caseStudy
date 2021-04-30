@@ -9,13 +9,11 @@ const OrderConfirmationPage = function () {
     }
 
     this.verifyShippingAddress = function (expectedAddress) {
-        console.log("add: ", Object.values(expectedAddress).join(" "))
         cy.get("div.confirmation-container__order-details-item--shipping")
             .should("contain.text", Object.values(expectedAddress).join(" "))
     }
 
     this.verifyBillingAddress = function (expectedAddress) {
-        console.log("add: ", Object.values(expectedAddress).join(" "))
         cy.get("div.confirmation-container__order-details-item--billing")
             .should("contain.text", Object.values(expectedAddress).join(" "))
     };

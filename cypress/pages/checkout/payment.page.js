@@ -24,9 +24,7 @@ const CheckoutPaymentPage = function () {
     }
 
     this.payWithCard = function (cardData) {
-        //payment
         cy.contains("div", "Payment").within(() => {
-
             cy.contains("div", "Pay with Card").click();
             cy.get("#encryptedCardNumber").type(cardData.cardNumber);
             cy.get("#encryptedExpiryDate").type(cardData.expirationDate);

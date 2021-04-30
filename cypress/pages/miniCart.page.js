@@ -1,9 +1,7 @@
 const MiniCartPage = function () {
 
-    //selectors
-
-    // functions
     //this is not the most elegant way to get details of the first item in the cart.
+    // but this is the only way i could think of while working on the use case.
     this.getDetailsOfTheFirstItemInTheCard = function () {
         const parent = "div.order-item--first"
         return cy.get(parent).find('a.order-item__title').invoke("text")
