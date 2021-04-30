@@ -1,5 +1,8 @@
 ### Case study: Write an E2E test for the happy path of the checkout flow
 This repo contains the solution for case study for QA.
+In the folder `strategyAndCases` you can find answers to the tasks 1 & 2 of the case study
+about the testing strategy for checkout functionality and example of 2 test cases.
+The `cypress` folder contains an automated test for a happy checkout path.
 I have chosen to implement a path that an unregistered user from Germany would have to go through to purchase an item from On.
 This test does not cover validations for taxes, paying with gift cards or applying promotion codes.
 Also it does not verify other payment options.
