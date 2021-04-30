@@ -40,7 +40,7 @@ describe('Checkout flow: Unregistered customer from Germany pays with Mastercard
         //get details of the added item to assert during checkout process
         cy.url().should("contain", checkoutRoutes.registration);
         checkoutRegistrationPage.fillInEMailAndSubmit(emailAddress)
-        cy.url().should("contains", checkoutRoutes.shipping);
+        cy.url().should("contain", checkoutRoutes.shipping);
     });
 
     it("Checkout, step 2: Shipping Address", function () {
@@ -50,7 +50,7 @@ describe('Checkout flow: Unregistered customer from Germany pays with Mastercard
 
         //assert standard delivery is selected
         shippingAddressPage.verifyDefaultShippingMethodAndSubmit();
-        cy.url().should("contains", checkoutRoutes.payment);
+        cy.url().should("contain", checkoutRoutes.payment);
     })
 
     it("Checkout, step 3: Payment", function () {
@@ -74,11 +74,11 @@ describe('Checkout flow: Unregistered customer from Germany pays with Mastercard
             totalPrice: itemDetails.itemPrice
         });
 
-        // skip verifying promo code & gift card as this spec does not use any of those.
+        //skip verifying promo code & gift card as this spec does not use any of those.
         //select pay with card option
         paymentPage.payWithMastercard(`${userInformation.firstname} ${userInformation.lastname}`)
         //confirmation page
-        cy.url().should("contains", checkoutRoutes.confirmation);
+        cy.url().should("contain", checkoutRoutes.confirmation);
     })
 
     it("Checkout, step 4: Verify Order Confirmation Page", function () {
@@ -89,7 +89,6 @@ describe('Checkout flow: Unregistered customer from Germany pays with Mastercard
             totalPrice: itemDetails.itemPrice
         });
 
-        //verify address in
         confirmationPage.verifyShippingAndBillingAddress({
             fullname: `${userInformation.firstname} ${userInformation.lastname}`,
             address: userInformation.streetAndHouseNumber,
