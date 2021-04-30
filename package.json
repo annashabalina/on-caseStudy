@@ -1,0 +1,15 @@
+{
+  "name": "on",
+  "version": "1.0.0",
+  "description": "Use case for On: Implement a spec for a \"happy\" checkout path",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --spec cypress/integration/specs/happyCheckoutFlow.spec.js --browser chrome --headless",
+    "cypress:open": "cypress open"
+  },
+  "author": "Anna Shabalina",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.2.0"
+  }
+}

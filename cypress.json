@@ -1,0 +1,4 @@
+{
+  "baseUrl": "https://*:**@staging-beta.on-running.com",
+  "defaultCommandTimeout": 10000
+}
