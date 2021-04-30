@@ -1,5 +1,6 @@
 const checkoutRoute = "/checkout"
-const explore = "/explore"
+const explore = "/explore";
+
 const checkoutRoutes = {
     registration: `${checkoutRoute}/registration`,
     shipping: `${checkoutRoute}/shipping`,

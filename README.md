@@ -19,3 +19,7 @@ Also it does not verify other payment options.
 as once the form is submitted, response from ``/graphql`` will be 500.
 So this stopped me to run all the next steps and to see if they will pass.
 There is a screenshot in `screenshots` folder and a recording in `videos` folder to give you a bit more insight on what is happening.
+
+In the `pages` folder it would also be a better solution to move selectors outside of functions
+and save them into variables. But considering time limitation and that there is only one spec and each selector
+is used only once, for this specific case I have decided to go with a bit simpler approach. 
